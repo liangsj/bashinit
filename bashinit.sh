@@ -21,7 +21,7 @@ cp .zshrc ~/.zshrc
 #install tmux
 $cmd install tmux -y
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-cp .tmux ~/.tmux
+cp .tmux.conf ~/.tmux.conf
 #install vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cp .vimrc ~/.vimrc
