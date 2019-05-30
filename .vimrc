@@ -57,16 +57,12 @@ let g:godef_same_file_in_same_window=1 """函数在同一个文件中时不需�
 
 Plug 'ervandew/supertab'
 
-Plug 'vim-syntastic/syntastic'
-
 Plug 'kien/ctrlp.vim'
 
+"语法检查
 Plug 'w0rp/ale'
 
 Plug 'christoomey/vim-tmux-navigator'
-
-let g:syntastic_go_checkers = ['go']
-let g:syntastic_php_checkers = ['php']
 
 call plug#end()
 

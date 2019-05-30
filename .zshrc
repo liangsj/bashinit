@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/liangshijian/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -95,33 +95,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gitup="python ~/tool/gitup.py"
-alias vimc="sh ~/tool/vimConfC.sh"
-alias c="~/tool/liangshijian_login.exp"
-alias relay='~/bin/relay_auto_login/relay'
-alias vi='nvim'
-alias tmux='tmux -2'
-source ~/tool/z/z.sh
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-export GOPATH=$HOME/goworkspace
-#:$HOME/learn/go:/Users/liangshijian/learn/blog
-export PATH=$PATH:$HOME/goworkspace/bin:$HOME/bin
-#export GO111MODULE=on
-# proxy list
-alias proxy='export socks5_proxy=socks5://127.0.0.1:1087;export http_proxy=http://127.0.0.1:1087;export https_proxy=http://127.0.0.1:1087;'
-alias unproxy='unset socks5_proxy http_proxy https_proxy'
-#设置C+Z回到vim
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
