@@ -2,7 +2,7 @@
 #zsh install
 echo "please input you bundle manager,exp : yum / apt-get/ jumbo"
 read bm
-cmd = "sudo yum"
+cmd="sudo yum"
 if [ "$bm" == "jumbo" ]  
 then  
 
@@ -10,8 +10,6 @@ cmd="jumbo"
 else 
 cmd="sudo "$bm
 fi
-echo $cmd
-exit
 #install Oh-my-shell
 $cmd install zsh -y
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" 
